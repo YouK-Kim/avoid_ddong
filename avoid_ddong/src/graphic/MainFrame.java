@@ -186,7 +186,7 @@ public class MainFrame implements Runnable, KeyListener{
 			}
 			stickMan.setBounds(stickman_X_location, 480, 30, 30);
 		} else if(e.getKeyCode() == 37) { //<-
-			if(acceleration < 5) {
+			if(acceleration < 8) {
 				acceleration++;
 			}
 			if(stickman_X_location >= 2 ) {
@@ -199,7 +199,7 @@ public class MainFrame implements Runnable, KeyListener{
 	@Override
 	public void keyReleased(KeyEvent e) {
 		if(e.getKeyCode() == 39 || e.getKeyCode() == 37) {// 키 떼었을때 가속도 0으로 조정
-			acceleration = 0;
+			acceleration = 4;
 		}
 	}
 
